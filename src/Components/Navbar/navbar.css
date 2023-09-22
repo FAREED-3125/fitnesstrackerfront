@@ -1,0 +1,19 @@
+.Header-navbar {
+  width: 100vw;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  height: 85px;
+}
+
+.Header-navbar h3 {
+  font-weight: 800;
+  color: var(--red);
+  font-size: 22px;
+}
+
+@media (max-width: 500px) {
+  .Header-navbar h3{
+   margin-left: 20px;
+  }
+}

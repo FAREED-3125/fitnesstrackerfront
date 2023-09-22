@@ -1,0 +1,73 @@
+.workout-container{
+    width: 60%;
+    height: 100%;
+    overflow: auto;
+}
+
+.workout-container::-webkit-scrollbar{
+    display: none;
+}
+a{
+    color: var(--red);
+}
+
+.Workout{
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    padding-left: 10px;
+    
+}
+
+.workout-headings{
+    width: 80%;
+    padding: 15px 0 0 10px;
+}
+
+.workout-headings h3{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.created-info{
+    margin: 20px 0 10px 0px;
+    font-size: 10px;
+}
+
+.work-details {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    gap: 10px;
+}
+
+.btn{
+    color: var(--white);
+    font-weight: 600;
+    padding: 10px;
+    width: 70px;
+    background-color: var(--red);
+
+}
+
+.workout-button{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .workout-container{
+     width: 95%;
+     margin: 0px auto;
+     flex-direction: column;
+     overflow: visible;
+     order: 2;
+    }
+    .workout-button{
+        padding-right: 15px;
+    }
+  }
