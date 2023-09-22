@@ -38,7 +38,7 @@ const WorkoutDetails = () => {
         },
         method: "DELETE",
       };
-      const response = await fetch(`/api/Workouts/${id}`, MethodDetails);
+      const response = await fetch(`${Fetch_url}/api/Workouts/${id}`, MethodDetails);
       if (!response.ok) throw Error("Error sending to the database.");
       setSuccess("SuccessFully Deleted");
       seterr(null);
