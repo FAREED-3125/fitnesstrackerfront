@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:5500",
+  "proxy": "https://fitnesstracker-h8nl.onrender.com ",
   "name": "client",
   "version": "0.1.0",
   "private": true,
