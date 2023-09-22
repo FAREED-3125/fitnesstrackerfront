@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./inputworkout.css";
-
+import { Fetch_url } from "../Workout Details/WorkoutDetails";
 const WorkoutInput = ({ isUpdate, setRender, id,setUpdateRender }) => {
   const [title, settitle] = useState("");
   const [reps, setreps] = useState("");
@@ -24,7 +24,7 @@ const WorkoutInput = ({ isUpdate, setRender, id,setUpdateRender }) => {
         method: "POST",
         body: JSON.stringify(body),
       };
-      const response = await fetch("/api/Workouts", MethodDetails);
+      const response = await fetch(`${Fetch_url}/api/Workouts`, MethodDetails);
       const data = await response.json();
       if (!response.ok) throw Error(data);
       console.log(data);

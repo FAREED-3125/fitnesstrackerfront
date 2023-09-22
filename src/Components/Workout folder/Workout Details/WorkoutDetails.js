@@ -3,7 +3,7 @@ import WorkoutInput from "../input Workout/workoutInput";
 import "./WorkoutDetails.css";
 import { Navigate, redirect, useParams } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
-
+export const  Fetch_url = "https://fitnesstracker-h8nl.onrender.com";
 const WorkoutDetails = () => {
   const [Workout, setWorkout] = useState({});
   const [err, seterr] = useState(null);
@@ -13,7 +13,7 @@ const WorkoutDetails = () => {
   const isUpdate = true;
   const singleWorkout = async () => {
     try {
-      const response = await fetch(`/api/workouts/${id}`);
+      const response = await fetch(`${Fetch_url}/api/workouts/${id}`);
       const data = await response.json();  
       console.log(data)
        if (!response.ok) throw Error(data);

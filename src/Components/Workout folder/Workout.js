@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import WorkoutList from "./WorkoutList";
 import "./workout.css";
 import WorkoutInput from "./input Workout/workoutInput";
-
+import { Fetch_url } from "./Workout Details/WorkoutDetails";
 const Workout = () => {
   const [workouts, setWorkouts] = useState([]);
   const [error, setError] = useState(null);
@@ -10,7 +10,7 @@ const Workout = () => {
   const [reRender, setRender] = useState(false);
   const FetchData = async () => {
     try {
-      const response = await fetch("/api/workouts");
+      const response = await fetch(`${Fetch_url}/api/workouts`);
       const data = await response.json();
       if (!response.ok) throw Error(data);
       setWorkouts(data);
